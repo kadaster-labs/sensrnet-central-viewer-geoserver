@@ -1,0 +1,17 @@
+<dataStore>
+  <id>DataStoreInfoImpl--69965022:176dc89bc14:-7ffb</id>
+  <name>mongodb-sensors</name>
+  <type>MongoDB</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--65e1fd2:176dc7d2a2f:-7fe0</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="data_store">mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}</entry>
+    <entry key="namespace">http://example.org/sensrnet</entry>
+    <entry key="schema_store">file:///var/geoserver/mongodb</entry>
+    <entry key="max_objs_schema">1</entry>
+  </connectionParameters>
+  <__default>false</__default>
+  <dateCreated>2021-01-07 11:15:54.343 UTC</dateCreated>
+</dataStore>

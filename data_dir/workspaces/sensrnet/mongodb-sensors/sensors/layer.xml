@@ -1,0 +1,17 @@
+<layer>
+  <name>sensors</name>
+  <id>LayerInfoImpl--69965022:176dc89bc14:-7ff9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--491e4218:176dcb0b695:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--69965022:176dc89bc14:-7ffa</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-07 11:18:38.335 UTC</dateCreated>
+  <dateModified>2021-01-07 15:26:45.282 UTC</dateModified>
+</layer>
