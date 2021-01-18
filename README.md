@@ -28,104 +28,24 @@ To succesfully run the image locally or dedicated, the following info has to be 
   - The password will be stored encrypted inside the "users.xml" file, found in the ${GEOSERVER_DATA_DIR} directory.
 
 ## Optional 
-(for use mainly within the server.xml file in /usr/local/tomcat/conf/server.xml)
-- ${ResContainer}
-  - For exmaple: "Container"
-- ${ResType}
-  - For exmaple: "javax.sql.DataSource"
-- ${ResDriverClass}
-  - For exmaple: "org.postgresql.Driver
-- ${ResUrl}
-  - For exmaple: "postgis-service"
-- ${ResPort}
-  - For exmaple: "5432"
-- ${ResUsername}
-  - For exmaple: "localuser"
-- ${ResPassword}
-  - For exmaple: "localpassword"
-- ${ResMaxTotal}
-  - For exmaple: "8"
-- ${ResMinIdle}
-  - For exmaple: "0"
-- ${ResMaxIdle}
-  - For exmaple: "8"
-- ${ResValQry}
-  - For exmaple: "SELECT 1"
+(for use within the datastore.xml file in /opt/geoserver/data_dir/workspaces/sensrnet/mongodb-sensors/datastore.xml)
+- ${MONGO_HOST}
+  - For example: "mongo"
+- ${MONGO_PORT}
+  - For example: "27017"
+- ${MONGO_DATABASE}
+  - For example: "sensrnet"
 
 # Launching
 
-## Run locally
-The following command(s) can be used to run the image locally. The "$1" needs to be replaced with the name of the image that was build.
-The geoserver_adminpw in this example is plaintext. This ENV can also be linked to a Docker / Kubernetes Secret.
-```
-docker run -ti  \
-    --rm \
-    --entrypoint=/bin/bash \
-    -p 8080:8080 \
-    -e docker_app_name="geoserver" \
-    -e INITIAL_MEMORY="2G" \
-    -e MAXIMUM_MEMORY="4G" \
-    -e geoserver_adminpw=\"blabla\" \
-    -e ResContainer="Container" \
-    -e ResType="javax.sql.DataSource" \
-    -e ResDriverClass="org.postgresql.Driver" \
-    -e ResUrl="postgis-service" \
-    -e ResPort="5432" \
-    -e ResUsername="localuser" \
-    -e ResPassword="localpassword" \
-    -e ResMaxTotal="8" \
-    -e ResMinIdle="0" \
-    -e ResMaxIdle="8" \
-    -e ResValQry="SELECT 1" \
-    $1
+Start:
+
+```bash
+$ docker-compose up
 ```
 
-## Run dedicated
+Stop:
 
+```bash
+$ docker-compose stop
 ```
-docker run -d  \
-    --rm \
-    --name="geoserver-local"
-    --entrypoint=/bin/bash \
-    -p 8080:8080 \
-    -e docker_app_name="geoserver" \
-    -e INITIAL_MEMORY="2G" \
-    -e MAXIMUM_MEMORY="4G" \
-    -e geoserver_adminpw=\"blabla\" \
-    -e ResContainer="Container" \
-    -e ResType="javax.sql.DataSource" \
-    -e ResDriverClass="org.postgresql.Driver" \
-    -e ResUrl="postgis-service" \
-    -e ResPort="5432" \
-    -e ResUsername="localuser" \
-    -e ResPassword="localpassword" \
-    -e ResMaxTotal="8" \
-    -e ResMinIdle="0" \
-    -e ResMaxIdle="8" \
-    -e ResValQry="SELECT 1" \
-    $1
-```
-
-# Extra info
-
-## Use of variables in files
-In order to copy over the value from ${variables} into a file, the command `envsubst` is used within this repo. 
-This command comes from the `gettext-base` package and is installed via `apt install`.
-
-Usage is `envsubst < inputfile > outputfile`.
-For example, taken from the `entrypoint.sh` script (stored in build_src/scripts/):
-
-```
-## Replace found ${variables} by ENV variables via 'envsubst'
-# 
-TOMCAT_HOME="/usr/local/tomcat"
-APP_FILES="/var/appdata/files"
-
-envsubst < ${APP_FILES}/server.template.xml > ${TOMCAT_HOME}/conf/server.xml
-
-##
-```
-The reason for using two files, instead of just using the same file as input and output, is when later the variables have to be found, which can be done in a search of the template.
-Instead of manually searching for unmatched ${variables} the use of grep can also be used. 
-
-Grep can also be used. Just point the <directory> towards your search location and grep will recursively search inside all files for missing / unset variables: `cd <directory> && grep -Ri '\$\{'`
