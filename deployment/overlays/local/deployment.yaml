@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: central-viewer-geoserver
+spec:
+  template:
+    spec:
+      containers:
+      - image: sensrnet-central-viewer-geoserver_geoserver:latest
+        name: central-viewer-geoserver
+        imagePullPolicy: Never
