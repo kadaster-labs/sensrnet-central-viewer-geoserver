@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: central-viewer-geoserver
+spec:
+  template:
+    spec:
+      containers:
+      - image: sensrnetnl/central-viewer-geoserver:0.1.0
+        name: central-viewer-geoserver
+        env:
+        - name: docker_app_name
+          value: geoserver
+        - name: INITIAL_MEMORY
+          value: 2G
+        - name: MAXIMUM_MEMORY
+          value: 4G
+        - name: geoserver_adminpw
+          valueFrom:
+              secretKeyRef:
+                name: geoserver-settings
+                key: adminpw
+        - name: MONGO_HOST
+          value: mongo
+        - name: MONGO_PORT
+          value: "27017"
+        - name: MONGO_DATABASE
+          value: sensrnet
+        ports:
+        - containerPort: 8080
