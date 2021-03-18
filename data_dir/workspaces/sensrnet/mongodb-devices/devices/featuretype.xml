@@ -1,14 +1,14 @@
 <featureType>
   <id>FeatureTypeInfoImpl--69965022:176dc89bc14:-7ffa</id>
-  <name>sensors</name>
-  <nativeName>sensors</nativeName>
+  <name>devices</name>
+  <nativeName>devices</nativeName>
   <namespace>
     <id>NamespaceInfoImpl--65e1fd2:176dc7d2a2f:-7fdf</id>
   </namespace>
-  <title>sensors</title>
+  <title>devices</title>
   <keywords>
     <string>features</string>
-    <string>sensors</string>
+    <string>devices</string>
   </keywords>
   <nativeCRS>GEOGCS[&quot;WGS 84&quot;, &#xd;
   DATUM[&quot;World Geodetic System 1984&quot;, &#xd;

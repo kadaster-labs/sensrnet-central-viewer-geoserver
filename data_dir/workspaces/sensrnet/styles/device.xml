@@ -1,6 +1,6 @@
 <style>
   <id>StyleInfoImpl--491e4218:176dcb0b695:-7ffc</id>
-  <name>sensor</name>
+  <name>device</name>
   <workspace>
     <id>WorkspaceInfoImpl--65e1fd2:176dc7d2a2f:-7fe0</id>
   </workspace>
@@ -8,7 +8,7 @@
   <languageVersion>
     <version>1.1.0</version>
   </languageVersion>
-  <filename>sensor.sld</filename>
+  <filename>device.sld</filename>
   <dateCreated>2021-01-07 11:59:05.845 UTC</dateCreated>
   <dateModified>2021-01-07 15:26:47.375 UTC</dateModified>
 </style>

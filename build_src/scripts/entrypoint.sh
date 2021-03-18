@@ -25,7 +25,7 @@ export JAVA_OPTS="${JAVA_OPTS} ${GEOSERVER_OPTS}"
 #
 APP_FILES="/var/appdata/files"
 
-envsubst < ${APP_FILES}/datastore.template.xml > ${GEOSERVER_DATA_DIR}/workspaces/sensrnet/mongodb-sensors/datastore.xml
+envsubst < ${APP_FILES}/datastore.template.xml > ${GEOSERVER_DATA_DIR}/workspaces/sensrnet/mongodb-devices/datastore.xml
 ##
 
 exec /usr/local/tomcat/bin/catalina.sh run
