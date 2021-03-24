@@ -112,6 +112,15 @@
       }
     },
     {
+      "localName": "location_object",
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "location"
+      }
+    },
+    {
       "localName": "sensors",
       "minOccurs": 0,
       "maxOccurs": 1,
