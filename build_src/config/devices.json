@@ -1,0 +1,135 @@
+{
+  "typeName": "devices",
+  "userData": {
+    "collection": "devices"
+  },
+  "geometryDescriptor": {
+    "localName": "location",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:EPSG:4326"
+      }
+    }
+  },
+  "attributeDescriptors": [
+    {
+      "localName": "_id",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "_id"
+      }
+    },
+    {
+      "localName": "name",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "name"
+      }
+    },
+    {
+      "localName": "description",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "description"
+      }
+    },
+    {
+      "localName": "category",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "category"
+      }
+    },
+    {
+      "localName": "connectivity",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "connectivity"
+      }
+    },
+    {
+      "localName": "dataStreams",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "dataStreams"
+      }
+    },
+    {
+      "localName": "sensors",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "sensors"
+      }
+    },
+    {
+      "localName": "__v",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.Integer"
+      },
+      "userData": {
+        "mapping": "__v"
+      }
+    },
+    {
+      "localName": "location",
+      "type": {
+        "binding": "org.locationtech.jts.geom.Geometry"
+      },
+      "userData": {
+        "encoding": "GeoJSON",
+        "mapping": "location"
+      }
+    },
+    {
+      "localName": "location_object",
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "location"
+      }
+    },
+    {
+      "localName": "sensors",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "type": {
+        "binding": "java.lang.String"
+      },
+      "userData": {
+        "mapping": "sensors"
+      }
+    }
+  ]
+}

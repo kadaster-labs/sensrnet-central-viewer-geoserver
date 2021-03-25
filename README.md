@@ -28,7 +28,7 @@ To succesfully run the image locally or dedicated, the following info has to be 
   - The password will be stored encrypted inside the "users.xml" file, found in the ${GEOSERVER_DATA_DIR} directory.
 
 ## Optional 
-(for use within the datastore.xml file in /opt/geoserver/data_dir/workspaces/sensrnet/mongodb-sensors/datastore.xml)
+(for use within the datastore.xml file in /opt/geoserver/data_dir/workspaces/sensrnet/mongodb-devices/datastore.xml)
 - ${MONGO_HOST}
   - For example: "mongo"
 - ${MONGO_PORT}

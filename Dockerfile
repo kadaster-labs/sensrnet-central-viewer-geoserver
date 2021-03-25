@@ -50,7 +50,7 @@ COPY build_src/config/logs/* ${GEOSERVER_DATA_DIR}/
 # Enable CORS
 COPY build_src/config/web.xml ${TOMCAT_HOME}/conf/
 
-COPY build_src/config/sensors.json /var/geoserver/mongodb/
+COPY build_src/config/devices.json /var/geoserver/mongodb/
 
 # Create the server.xml
 COPY build_src/config/server.xml ${TOMCAT_HOME}/conf/server.xml

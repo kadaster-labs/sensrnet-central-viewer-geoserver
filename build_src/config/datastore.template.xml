@@ -1,6 +1,6 @@
 <dataStore>
   <id>DataStoreInfoImpl--69965022:176dc89bc14:-7ffb</id>
-  <name>mongodb-sensors</name>
+  <name>mongodb-devices</name>
   <type>MongoDB</type>
   <enabled>true</enabled>
   <workspace>
