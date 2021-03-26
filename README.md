@@ -11,11 +11,11 @@ local test runs are also possible.
 ## Building the image
 To build the image locally, build it via the following command: `docker build --no-cache -t <imagename:imagetag> .`
 
-# GeoServer configuration / docker image
+## GeoServer configuration / docker image
 
 To succesfully run the image locally or dedicated, the following info has to be supplied:
 
-## Mandatory
+### Mandatory
 - -Xms${INITIAL_MEMORY}
   - Initial memory used to start the container with. This ENV isn't linked and has to be set manually.
   - Not setting it will result in the application not starting!
@@ -27,7 +27,7 @@ To succesfully run the image locally or dedicated, the following info has to be 
   - Please note the user is always "admin". 
   - The password will be stored encrypted inside the "users.xml" file, found in the ${GEOSERVER_DATA_DIR} directory.
 
-## Optional 
+### Optional 
 (for use within the datastore.xml file in /opt/geoserver/data_dir/workspaces/sensrnet/mongodb-devices/datastore.xml)
 - ${MONGO_HOST}
   - For example: "mongo"
@@ -36,7 +36,7 @@ To succesfully run the image locally or dedicated, the following info has to be 
 - ${MONGO_DATABASE}
   - For example: "sensrnet"
 
-# Launching
+## Launching
 
 Start:
 
@@ -49,3 +49,23 @@ Stop:
 ```bash
 $ docker-compose stop
 ```
+
+## Credits
+
+Thanks to [semver_bash](https://github.com/cloudflare/semver_bash) to enable proper versioning and automation of releasing.
+
+## Find Us
+
+* [GitHub](https://github.com/kadaster-labs/sensrnet-home)
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Maintainers <a name="maintainers"></a>
+
+Should you have any questions or concerns, please reach out to one of the project's [Maintainers](./MAINTAINERS.md).
+
+## License
+
+This work is licensed under a [EUPL v1.2 license](./LICENSE.md).
