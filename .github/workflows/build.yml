@@ -31,6 +31,8 @@ jobs:
     steps:
     # Check out the code
     - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.AUTH_TOKEN }} # Use administrator personal access token for pushing to protected branch
 
     # Bump the version, https://github.com/marketplace/actions/setup-node-js-environment
     - name: Bump semver version
