@@ -36,7 +36,7 @@ jobs:
     - name: Bump semver version
       id: bump-version
       run: |
-        release.sh $INPUT_RELEASETYPE
+        release.sh ${{ github.event.inputs.releaseType }}
         VERSION=$(head -n 1 VERSION)
         echo "::set-output name=version::${VERSION}"
 
