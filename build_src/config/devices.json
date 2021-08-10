@@ -69,14 +69,14 @@
       }
     },
     {
-      "localName": "dataStreams",
+      "localName": "datastreams",
       "minOccurs": 0,
       "maxOccurs": 1,
       "type": {
         "binding": "java.lang.String"
       },
       "userData": {
-        "mapping": "dataStreams"
+        "mapping": "datastreams"
       }
     },
     {
